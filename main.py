@@ -1,15 +1,24 @@
 def get_book_text(filepath):
-    with open(filepath) as s:
-    # Use 'with' to open the file at that path; 's' represents the open file
-        return s.read()
-        # Read the file's contents into a string and return it
+    with open(filepath) as file:
+    # open the file at that path; 's' represents the open file
+        return file.read()
+        # give back the entire contents of the file as one long string
     
+
+def count_words(text):
+    num_words = len(text.split())
+    # split the string into a list of words on whitespace(no argument), then count them
+    return num_words
+    # send the count back to the caller
+
 def main():
     path = "books/frankenstein.txt"
-    # Store the location of our file in a variable
+    # store the location of our file in a variable
     text = get_book_text(path)
-     # Call our function, passing the path, and save the result in 'text'
-    print(text)
-    # Output the text to the console
-    
+    # call our function, use the path, and save the result in 'text'
+    get_num_words = count_words(text)
+    # call count_words with the book text and store the returned word count
+    print(f"Found {get_num_words} total words")
+
+
 main()
