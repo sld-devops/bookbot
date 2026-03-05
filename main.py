@@ -1,8 +1,9 @@
 def get_book_text(filepath):
-    with open(filepath) as file:
     # open the file at given path
-        return file.read()
+    with open(filepath) as file:
         # read it and give back the entire contents as one long string
+        return file.read()
+        
     
 
 def count_words(text):
