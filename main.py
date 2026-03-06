@@ -4,13 +4,7 @@ def get_book_text(filepath):
         # read it and give back the entire contents as one long string
         return file.read()
         
-    
-
-def count_words(text):
-    # split contents into a list of words on whitespace(no argument), then count them
-    num_words = len(text.split())
-    return num_words
-    
+from stats import get_num_words
 
 def main():
     # store the location of our file in a variable
@@ -18,7 +12,7 @@ def main():
     # call our function, use the path, and save the result in 'text'
     text = get_book_text(path)
     # call count_words on the content and store the returned word count
-    num_words = count_words(text)
+    num_words = get_num_words(text)
     print(f"Found {num_words} total words")
 
     # print(text) - output the contents to the console
