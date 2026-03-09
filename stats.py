@@ -17,6 +17,7 @@ def get_char_appearance(text):
     return seen_counts
 
 def sort_on(seen_counts):
+    # helper, give value associated with key "num", will use this later to sort
     return seen_counts["num"]
 
 def get_sorted_count(seen_counts):

@@ -1,4 +1,5 @@
 import sys
+from stats import get_num_words, get_char_appearance, sort_on, get_sorted_count
 
 def get_book_text(filepath):
     # open the file at given path
@@ -6,7 +7,6 @@ def get_book_text(filepath):
         # read it and give back the entire contents as one long string
         return file.read()
         
-from stats import get_num_words, get_char_appearance, sort_on, get_sorted_count
 
 def main():
     # check if argv has length of 2 items (script name and book path)
